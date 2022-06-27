@@ -1,0 +1,28 @@
+{
+  "name": "svelexpress",
+  "version": "1.0.0",
+  "author": "narad-muni",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "nodemon server/server.js",
+    "deploy":"node server/server.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "nodemon": "^2.0.18",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "sirv-cli": "^2.0.0"
+  }
+}
