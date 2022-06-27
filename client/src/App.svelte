@@ -1,30 +1,12 @@
 <script>
+	import Router from 'svelte-spa-router';
+	import Error from './Error.svelte';
+	import Home from './Home.svelte';
 	
+	const routes = {
+		'/':Home,
+		'/404':Error
+	}
 </script>
 
-<main>
-	<h1>Kem cho Badha!</h1>
-	<p>Visit the <a href="/api/get">/api/get</a> to learn view API's.</p>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<Router {routes} ></Router>
